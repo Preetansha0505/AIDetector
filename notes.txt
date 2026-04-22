@@ -408,3 +408,5 @@ https://arxiv.org/pdf/2507.00838
 https://rdi.berkeley.edu/blog/trustworthy-benchmarks-cont/ - trustworthy benchmarks in AI
 
 Goodhart's law
+
+https://www.lesswrong.com/posts/6ZnznCaTcbGYsCmqu/the-rise-of-parasitic-ai

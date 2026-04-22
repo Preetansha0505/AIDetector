@@ -55,5 +55,14 @@ from src.perplexity import calculate_perplexity, calculate_perplexity_detailed
 text1 = "APIs (Application Programming Interfaces) allow different software systems to communicate with each other. Think of an API as a waiter in a restaurant—it takes your request, delivers it to the kitchen, and brings back the response. For example, when you use a weather app, it doesn't generate weather data itself. Instead, it sends a request to a weather API, which returns the current temperature and forecast."
 # text2 = "Bro I tried this and it completely broke, not even kidding."
 
-print("Text Perplexity:", calculate_perplexity(text1))
+# print("Text Perplexity:", calculate_perplexity(text1))
 # print("Text2 Perplexity:", calculate_perplexity(text2))
+
+from src.stylometry import extract_stylometric_features
+
+# text = """I honestly didn’t expect this to work. 
+# But somehow it did, and now I’m confused but impressed."""
+
+features = extract_stylometric_features(text1)
+
+print(features)
