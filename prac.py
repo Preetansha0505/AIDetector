@@ -58,11 +58,21 @@ text1 = "APIs (Application Programming Interfaces) allow different software syst
 # print("Text Perplexity:", calculate_perplexity(text1))
 # print("Text2 Perplexity:", calculate_perplexity(text2))
 
-from src.stylometry import extract_stylometric_features
+# from src.stylometry import extract_stylometric_features
 
-# text = """I honestly didn’t expect this to work. 
-# But somehow it did, and now I’m confused but impressed."""
+# # text = """I honestly didn’t expect this to work. 
+# # But somehow it did, and now I’m confused but impressed."""
 
-features = extract_stylometric_features(text1)
+# features = extract_stylometric_features(text1)
+
+# print(features)
+
+from src.paraphrase import extract_semantic_features
+from src.preprocess import preprocess_text
+
+
+processed = preprocess_text(text1)
+
+features = extract_semantic_features(processed["sentences"])
 
 print(features)
