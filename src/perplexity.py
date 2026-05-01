@@ -10,8 +10,13 @@ model.eval()
 
 
 def calculate_perplexity(text):
-    encodings = tokenizer(text, return_tensors="pt")
-    
+    encodings = tokenizer(
+        text,
+        return_tensors="pt",
+        truncation=True,
+        max_length=1024   # 🔥 critical
+    )
+
     input_ids = encodings.input_ids
 
     with torch.no_grad():

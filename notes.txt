@@ -410,3 +410,33 @@ https://rdi.berkeley.edu/blog/trustworthy-benchmarks-cont/ - trustworthy benchma
 Goodhart's law
 
 https://www.lesswrong.com/posts/6ZnznCaTcbGYsCmqu/the-rise-of-parasitic-ai
+
+
+Are you one of them?
+
+In Interstellar, Cooper when he falls into the black hole Gargantua. Instead, he enters the tesseract  a mind-bending 4D construct where time is no longer linear but a dimension he can move through.
+
+Every moment of Murph’s bedroom exists at once, stacked together like the pages of a book. Cooper realizes he can use gravity to send signals across time the very clue Murph needs to save humanity.
+
+This scene isn’t just sci-fi drama. It’s Christopher Nolan visualizing ideas from Einstein’s relativity and higher-dimensional space. Time, love, gravity all colliding in one of the most powerful moments in cinema.
+
+So here’s the challenge:
+👉 Do you truly understand what’s happening here? Or does it still blow your mind every time?
+
+✨ Drop your explanation below. Let’s see who’s really got the genius spark.
+
+Interstellar Tesseract scene, Interstellar explained, Interstellar black hole, Gargantua Interstellar, higher dimensions, Interstellar ending, tesseract explained
+
+
+https://github.com/mattpocock/skills/tree/main
+https://x.com/lifeof_jer/status/2048103471019434248
+https://www.theregister.com/2026/01/26/cursor_opinion/
+https://natesnewsletter.substack.com/p/executive-briefing-what-cursors-57k
+https://quasa.io/media/when-cursor-wiped-a-user-s-pc-a-cautionary-tale-of-ai-overreach
+https://www.mintmcp.com/blog/cursor-plan-mode-destructive-operations
+https://cursor.com/blog/agent-best-practices
+https://cursor.com/docs/agent/security
+https://www.pcgamer.com/software/ai/here-we-go-again-ai-deletes-entire-company-database-and-all-backups-in-9-seconds-then-cheerfully-admits-i-violated-every-principle-i-was-given/
+
+B2C integration
+how agents thinks?

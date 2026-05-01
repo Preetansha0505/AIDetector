@@ -1,78 +1,86 @@
-# pip install -U spacy
-# python -m spacy download en_core_web_sm
-import spacy
-from spacy.tokenizer import Tokenizer
+# import re
+# from collections import Counter
+# from writing_samples import writing_detector_data, writing_styles
 
-# Load English tokenizer, tagger, parser and NER
-nlp = spacy.load("en_core_web_sm")
-
-# Process whole documents
-# text = ("When Sebastian Thrun started working on self-driving cars at "
-#         "Google in 2007, few people outside of the company took him "
-#         "seriously. “I can tell you very senior CEOs of major American "
-#         "car companies would shake my hand and turn away because I wasn’t "
-#         "worth talking to,” said Thrun, in an interview with Recode earlier "
-#         "this week.")
-
-# text = "APIs (Application Programming Interfaces) allow different software systems to communicate with each other. Think of an API as a waiter in a restaurant—it takes your request, delivers it to the kitchen, and brings back the response. For example, when you use a weather app, it doesn't generate weather data itself. Instead, it sends a request to a weather API, which returns the current temperature and forecast."
-# doc = nlp(text)
-
-# # Analyze syntax
-# print("Noun phrases:", [chunk.text for chunk in doc.noun_chunks])
-# print("Verbs:", [token.lemma_ for token in doc if token.pos_ == "VERB"])
-
-# # Find named entities, phrases and concepts
-# for entity in doc.ents:
-#     print(entity.text, entity.label_)
-
-# # Splitting sentences
-# nlp.add_pipe("sentencizer")
-# docx = doc
-# # assert len(list(doc.sents)) == 2
-# doc_lis = list(docx.sents)
-# print(doc_lis)
-# print(len(doc_lis))
-
-# Tokenisation
-# tokenizer = Tokenizer(nlp.vocab)
-# token = tokenizer(text)
-
-# print([token], len(token))
-
-# from src.data_loader import load_data
-# from src.preprocess import preprocess_text
-
-# df = load_data("data/ai_human_detection_v1.csv")
-
-# sample = df.iloc[1]["text"]
-
-# result = preprocess_text(sample)
-
-# print(result)
-
-from src.perplexity import calculate_perplexity, calculate_perplexity_detailed
-
-text1 = "APIs (Application Programming Interfaces) allow different software systems to communicate with each other. Think of an API as a waiter in a restaurant—it takes your request, delivers it to the kitchen, and brings back the response. For example, when you use a weather app, it doesn't generate weather data itself. Instead, it sends a request to a weather API, which returns the current temperature and forecast."
-# text2 = "Bro I tried this and it completely broke, not even kidding."
-
-# print("Text Perplexity:", calculate_perplexity(text1))
-# print("Text2 Perplexity:", calculate_perplexity(text2))
-
-# from src.stylometry import extract_stylometric_features
-
-# # text = """I honestly didn’t expect this to work. 
-# # But somehow it did, and now I’m confused but impressed."""
-
-# features = extract_stylometric_features(text1)
-
-# print(features)
-
-from src.paraphrase import extract_semantic_features
-from src.preprocess import preprocess_text
+# def wordAnalysis(text):
+#     """Analyze text for AI writing indicators with improved efficiency and accuracy"""
+#     if not text or len(text.strip()) == 0:
+#         return 0
+    
+#     text_lower = text.lower()
+#     text_length = len(text.split())  # Word count for normalization
+    
+#     matched_phrases = {}
+#     total_matches = 0
+    
+#     # Check each category with weighted scoring
+#     weights = {
+#         "filler_phrases": 3,
+#         "credibility_markers": 2,
+#         "descriptive_overuse": 2,
+#         "attribution_patterns": 1,
+#         "structural_patterns": 4,
+#         "commonly_overused_words": 1,
+#         "common_constructions": 3,
+#     }
+    
+#     for category, indicators in writing_detector_data["ai_writing_indicators"].items():
+#         matched_phrases[category] = []
+#         weight = weights.get(category, 1)
+        
+#         for indicator in indicators:
+#             # Use word boundaries for better accuracy
+#             pattern = r'\b' + re.escape(indicator.lower()) + r'\b'
+#             matches = len(re.findall(pattern, text_lower))
+            
+#             if matches > 0:
+#                 matched_phrases[category].append({
+#                     "phrase": indicator,
+#                     "count": matches,
+#                     "weight": weight
+#                 })
+#                 total_matches += matches * weight
+    
+#     # Normalize score to 0-100 range
+#     # Higher word count = lower percentage (harder to be 100% AI)
+#     normalization_factor = max(text_length / 100, 1)
+#     raw_score = total_matches / normalization_factor
+    
+#     # Cap at 100%
+#     final_score = min(raw_score, 100)
+    
+#     return final_score, matched_phrases
 
 
-processed = preprocess_text(text1)
+# def displayResults(score, matched_phrases):
+#     """Display analysis results in a readable format"""
+#     print(f"\n{'='*60}")
+#     print(f"AI Writing Detection Result: {score:.1f}%")
+#     print(f"{'='*60}\n")
+    
+#     if score < 20:
+#         assessment = "Likely HUMAN-written"
+#     elif score < 50:
+#         assessment = "Possibly human-written with some AI characteristics"
+#     elif score < 80:
+#         assessment = "Likely AI-assisted or heavily edited"
+#     else:
+#         assessment = "Likely AI-generated"
+    
+#     print(f"Assessment: {assessment}\n")
+    
+#     # Show matched phrases by category
+#     for category, matches in matched_phrases.items():
+#         if matches:
+#             print(f"{category.upper().replace('_', ' ')}:")
+#             for item in matches:
+#                 print(f"  - '{item['phrase']}' (found {item['count']} time(s))")
+#             print()
 
-features = extract_semantic_features(processed["sentences"])
 
-print(features)
+from tqdm import tqdm
+a = 0
+for i in tqdm(range(10000)):
+    # your code here
+    a += 1
+print(a)
