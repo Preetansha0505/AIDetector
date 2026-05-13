@@ -42,3 +42,16 @@ def extract_stylometric_features(text):
         "stopword_ratio": stopword_ratio,
         "pos_distribution": pos_distribution
     }
+    
+    
+def flatten_features(features):
+    flat = {}
+
+    for key, value in features.items():
+        if isinstance(value, dict):
+            for sub_key, sub_val in value.items():
+                flat[f"{key}_{sub_key}"] = sub_val
+        else:
+            flat[key] = value
+
+    return flat

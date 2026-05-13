@@ -1,7 +1,7 @@
 from src.data_loader import load_data
 from src.preprocess import preprocess_text
 from src.perplexity import calculate_perplexity, calculate_perplexity_detailed
-from src.stylometry import extract_stylometric_features
+from src.stylometry import extract_stylometric_features, flatten_features
 from src.paraphrase import extract_semantic_features
 
 def extract_features(text):
@@ -14,6 +14,7 @@ def extract_features(text):
 
     # Calculating stylometry ratio
     stylo_res = extract_stylometric_features(text)
+    stylo_res = flatten_features(stylo_res)
 
     # Calculating paraphrasing ratio
     paraphrase_res = extract_semantic_features(preprocess_res["sentences"])

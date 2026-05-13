@@ -13,9 +13,14 @@ def build_feature_dataset(input_path, output_path):
         label = row["human_or_ai"]
 
         feats = extract_features(text)
-        feats["label"] = label
+        clean_feats = {}
 
-        feature_rows.append(feats)
+        for k, v in feats.items():
+            if isinstance(v, (int, float)):
+                clean_feats[k] = v
+        
+        clean_feats["label"] = label
+        feature_rows.append(clean_feats)
 
     feature_df = pd.DataFrame(feature_rows)
     feature_df.fillna(0, inplace=True)

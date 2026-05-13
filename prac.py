@@ -78,9 +78,21 @@
 #             print()
 
 
-from tqdm import tqdm
-a = 0
-for i in tqdm(range(10000)):
-    # your code here
-    a += 1
-print(a)
+# from tqdm import tqdm
+# a = 0
+# for i in tqdm(range(10000)):
+#     # your code here
+#     a += 1
+# print(a)
+
+
+from src.train_model import train
+from src.predict import predict
+
+model = train()
+
+text = "This essay explores the role of artificial intelligence in modern applications."
+
+result = predict(text, model)
+
+print(result)
