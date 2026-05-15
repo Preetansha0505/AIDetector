@@ -451,3 +451,9 @@ I said it alredy but Boris' character development goes like this in a nutshell.
  3. Okay... Legasov is not bull****ing.
  4. Oh for crying out loud!!! Is Legasov the only one who is not bull****ing?!
 
+https://daniel.haxx.se/blog/2026/05/11/mythos-finds-a-curl-vulnerability/
+https://daniel.haxx.se/blog/2026/04/22/high-quality-chaos/
+https://daniel.haxx.se/blog/2026/01/26/the-end-of-the-curl-bug-bounty/
+https://daniel.haxx.se/blog/2024/01/02/the-i-in-llm-stands-for-intelligence/
+https://www.latent.space/p/ainews-autoresearch-sparks-of-recursive
+https://github.com/karpathy/autoresearch/blob/master/README.md
